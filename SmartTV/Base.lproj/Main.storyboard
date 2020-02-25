@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1638" y="126"/>
+            <point key="canvasLocation" x="105" y="125"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="Eco-yo-RvX">
@@ -233,7 +233,128 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIk-dE-Isj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-431" y="125"/>
+            <point key="canvasLocation" x="990" y="125"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="ToT-57-6F2">
+            <objects>
+                <viewController id="qlC-bT-hyr" customClass="AddEventVC1" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sit-ED-qt2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9St-Qt-lVc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="Kb3-lk-ZHd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p31-vH-Eg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="860"/>
+        </scene>
+        <!--NavVC2-->
+        <scene sceneID="bZI-BR-hPz">
+            <objects>
+                <navigationController storyboardIdentifier="navBar2" id="9wB-cw-71k" customClass="NavVC2" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O9a-uK-RYD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mow-ud-N3a" kind="relationship" relationship="rootViewController" id="tka-nx-PJe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wll-ws-jMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="1620"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="Pdm-Al-aEo">
+            <objects>
+                <viewController id="Mow-ud-N3a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8U-Ts-2M1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4E-LO-ldS">
+                                <rect key="frame" x="152" y="134" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Event"/>
+                                <connections>
+                                    <segue destination="KeX-7e-32i" kind="show" id="UF7-hX-BEP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjm-wj-7Fu">
+                                <rect key="frame" x="149" y="209" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TV Remote"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PCj-GA-Lvv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="N5b-pg-iJ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7l-lu-VC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="1620"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="84h-4l-ZfN">
+            <objects>
+                <viewController id="KeX-7e-32i" customClass="AddEventVC2" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Po-di-DlA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="haa-zj-cNP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="Vf9-Ew-9Ne"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oas-Ln-fJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="1620"/>
+        </scene>
+        <!--NavVC1-->
+        <scene sceneID="lKY-7D-O1x">
+            <objects>
+                <navigationController storyboardIdentifier="navBar" id="DNc-YZ-m4b" customClass="NavVC1" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ite-DS-Ixg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LYo-y2-JFZ" kind="relationship" relationship="rootViewController" id="Vtv-Jj-hGC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKA-0Q-sql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="861"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="e5x-oz-F06">
+            <objects>
+                <viewController id="LYo-y2-JFZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jDQ-po-pgH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rp-GP-8ln">
+                                <rect key="frame" x="152" y="119" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Event"/>
+                                <connections>
+                                    <segue destination="qlC-bT-hyr" kind="show" id="O2P-YG-Kjl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a32-ps-oip"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="SbT-z7-Fub"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEx-8C-AkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="862"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WHg-Vz-DM8">
@@ -303,14 +424,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTK-0l-2UV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2753" y="127"/>
+            <point key="canvasLocation" x="-770" y="125"/>
         </scene>
     </scenes>
     <resources>
         <image name="Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg" width="500" height="889"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UP2-Np-e5h"/>
-        <segue reference="sOD-2p-HFj"/>
+        <segue reference="erO-rZ-kSz"/>
+        <segue reference="HGX-Zv-6sm"/>
     </inferredMetricsTieBreakers>
 </document>

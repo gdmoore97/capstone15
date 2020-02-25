@@ -54,7 +54,7 @@ class LoginVC: UIViewController {
             
             //send request to mysql db
             // url to access our php file
-            let url = URL(string: "http://smartersmarttv.com/login.php")!
+            let url = URL(string: "http://smartersmarttv.com/tv_login.php")!
             
             // request url
             var request = URLRequest(url: url)
@@ -82,11 +82,39 @@ class LoginVC: UIViewController {
                         }
                         
                         let id = parseJSON["id"] as? String
+                        let role = parseJSON["role"] as? String
                         
                         if id != nil {
                             
-                            // save user info we recieved from host
-                            UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                                UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                                user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+                                //print(user)
+                                                    
+                            // go to tabbar / home page
+                            DispatchQueue.main.async(execute: {
+                                //print(role as Any)
+                                
+                                // if the user is a cargiver, go to NavBar1
+                                if role == "Caregiver" {
+                                    // login function
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let nBar = storyboard.instantiateViewController(withIdentifier: "navBar")
+                                    self.present(nBar, animated: true, completion: nil)
+                                }
+                                
+                                else if role == "Owner" {
+                                    // do the same as above but with a different NavBar
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let nBar2 = storyboard.instantiateViewController(withIdentifier: "navBar2")
+                                    self.present(nBar2, animated: true, completion: nil)
+                                    
+                                }
+                                
+                                else {
+                                    // throw an alert error
+                                }
+                            
+                            })
                             
                             
                         } else {

@@ -15,6 +15,10 @@
 		AE30CD3723F730680050A892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3523F730680050A892 /* LaunchScreen.storyboard */; };
 		AE30CD3F23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */; };
 		AE682D5923FB3D4B00C411EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE682D5823FB3D4B00C411EE /* LoginVC.swift */; };
+		AEECB11F2405772500C02A87 /* NavVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEECB11E2405772500C02A87 /* NavVC1.swift */; };
+		AEECB12124057B4A00C02A87 /* NavVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEECB12024057B4A00C02A87 /* NavVC2.swift */; };
+		AEECB125240580F400C02A87 /* AddEventVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEECB124240580F400C02A87 /* AddEventVC1.swift */; };
+		AEECB1272405829C00C02A87 /* AddEventVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEECB1262405829C00C02A87 /* AddEventVC2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		AE30CD3823F730680050A892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg"; sourceTree = "<group>"; };
 		AE682D5823FB3D4B00C411EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		AEECB11E2405772500C02A87 /* NavVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVC1.swift; sourceTree = "<group>"; };
+		AEECB12024057B4A00C02A87 /* NavVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVC2.swift; sourceTree = "<group>"; };
+		AEECB124240580F400C02A87 /* AddEventVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventVC1.swift; sourceTree = "<group>"; };
+		AEECB1262405829C00C02A87 /* AddEventVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventVC2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */,
 				AE30CD3523F730680050A892 /* LaunchScreen.storyboard */,
 				AE30CD3823F730680050A892 /* Info.plist */,
+				AEECB11E2405772500C02A87 /* NavVC1.swift */,
+				AEECB12024057B4A00C02A87 /* NavVC2.swift */,
+				AEECB124240580F400C02A87 /* AddEventVC1.swift */,
+				AEECB1262405829C00C02A87 /* AddEventVC2.swift */,
 			);
 			path = SmartTV;
 			sourceTree = "<group>";
@@ -147,8 +159,12 @@
 			files = (
 				AE30CD2F23F730670050A892 /* RegisterVC.swift in Sources */,
 				AE30CD2B23F730670050A892 /* AppDelegate.swift in Sources */,
+				AEECB1272405829C00C02A87 /* AddEventVC2.swift in Sources */,
 				AE682D5923FB3D4B00C411EE /* LoginVC.swift in Sources */,
+				AEECB125240580F400C02A87 /* AddEventVC1.swift in Sources */,
+				AEECB11F2405772500C02A87 /* NavVC1.swift in Sources */,
 				AE30CD2D23F730670050A892 /* SceneDelegate.swift in Sources */,
+				AEECB12124057B4A00C02A87 /* NavVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

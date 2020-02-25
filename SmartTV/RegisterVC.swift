@@ -133,9 +133,10 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                 
                                 //user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
                                 
-                                // go to home page
+                                // display a message saying success & go back to registration page
                                 DispatchQueue.main.async(execute: {
-                                 //   //AppDelegate.login()
+                                    let message = "You have created an account"
+                                    self.createAlert(title: "Success!", message: message)
                                 })
                                 
                             // error
