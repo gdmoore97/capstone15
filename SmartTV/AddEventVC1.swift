@@ -53,7 +53,7 @@ class AddEventVC1: UIViewController {
             // request to the file
             var request = URLRequest(url: url)
             
-            // method to pass date to the file
+            // method to pass data to the file
             request.httpMethod = "POST"
             
             // body to be appended to url

@@ -140,7 +140,7 @@
         <!--LoginVC-->
         <scene sceneID="Eco-yo-RvX">
             <objects>
-                <viewController id="E6B-Pk-G2A" customClass="LoginVC" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="E6B-Pk-G2A" customClass="LoginVC" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqg-PD-LWk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +276,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-Xy-pOf">
                                 <rect key="frame" x="21" y="580" width="332" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -325,59 +325,140 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Mow-ud-N3a" kind="relationship" relationship="rootViewController" id="tka-nx-PJe"/>
+                        <segue destination="dNn-NI-oqs" kind="relationship" relationship="rootViewController" id="Onf-Zb-kq2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wll-ws-jMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-769" y="1620"/>
+            <point key="canvasLocation" x="-770" y="1567"/>
         </scene>
         <!--Main Menu-->
-        <scene sceneID="Pdm-Al-aEo">
+        <scene sceneID="URe-39-kJe">
             <objects>
-                <viewController id="Mow-ud-N3a" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n8U-Ts-2M1">
+                <viewController id="dNn-NI-oqs" customClass="MainMenuVC2" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ueg-B8-DwI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4E-LO-ldS">
-                                <rect key="frame" x="152" y="134" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-kf-3Od">
+                                <rect key="frame" x="152" y="157" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Event"/>
                                 <connections>
-                                    <segue destination="KeX-7e-32i" kind="show" id="UF7-hX-BEP"/>
+                                    <segue destination="D6i-g9-2t8" kind="show" id="tZE-mw-yf1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjm-wj-7Fu">
-                                <rect key="frame" x="149" y="209" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-YP-D4d">
+                                <rect key="frame" x="149" y="229" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="TV Remote"/>
+                                <connections>
+                                    <segue destination="jCq-8u-30X" kind="show" id="U7M-rT-KqU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51e-JX-g5b">
+                                <rect key="frame" x="163" y="303" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout_click:" destination="dNn-NI-oqs" eventType="touchUpInside" id="mIu-XD-2MB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="PCj-GA-Lvv"/>
+                        <viewLayoutGuide key="safeArea" id="5K9-F5-RTc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="N5b-pg-iJ9"/>
+                    <navigationItem key="navigationItem" title="Main Menu" id="AJo-fb-ilY"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s7l-lu-VC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbS-Ot-JbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="1620"/>
+            <point key="canvasLocation" x="102" y="1580"/>
         </scene>
-        <!--Add Event-->
-        <scene sceneID="84h-4l-ZfN">
+        <!--Add Event ViewC2-->
+        <scene sceneID="biH-fl-iJy">
             <objects>
-                <viewController id="KeX-7e-32i" customClass="AddEventVC2" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Po-di-DlA">
+                <viewController id="D6i-g9-2t8" customClass="AddEventViewC2" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O38-lP-V2K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7h-iZ-x7C">
+                                <rect key="frame" x="16" y="104" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lj-nl-GBI">
+                                <rect key="frame" x="16" y="173" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event date &amp; time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-Q3-d1o">
+                                <rect key="frame" x="16" y="242" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8c-2o-Tou">
+                                <rect key="frame" x="141" y="301" width="96" height="38"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Add Event">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="add_event_click:" destination="D6i-g9-2t8" eventType="touchUpInside" id="bgr-8s-Vv7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za6-RM-n6v">
+                                <rect key="frame" x="168" y="582" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E8c-2o-Tou" firstAttribute="leading" secondItem="SoC-pO-8w3" secondAttribute="leading" constant="141" id="2fN-jw-08d"/>
+                            <constraint firstItem="dNx-Q3-d1o" firstAttribute="top" secondItem="2lj-nl-GBI" secondAttribute="bottom" constant="35" id="4p9-9O-IxE"/>
+                            <constraint firstItem="SoC-pO-8w3" firstAttribute="bottom" secondItem="za6-RM-n6v" secondAttribute="bottom" constant="64" id="8SQ-3e-gSO"/>
+                            <constraint firstItem="2lj-nl-GBI" firstAttribute="leading" secondItem="dNx-Q3-d1o" secondAttribute="leading" id="C9i-9x-Edk"/>
+                            <constraint firstItem="G7h-iZ-x7C" firstAttribute="top" secondItem="SoC-pO-8w3" secondAttribute="top" constant="60" id="JtT-d3-6IH"/>
+                            <constraint firstItem="G7h-iZ-x7C" firstAttribute="trailing" secondItem="O38-lP-V2K" secondAttribute="trailingMargin" id="PNW-vp-rnu"/>
+                            <constraint firstItem="2lj-nl-GBI" firstAttribute="top" secondItem="G7h-iZ-x7C" secondAttribute="bottom" constant="35" id="POd-2e-i76"/>
+                            <constraint firstItem="G7h-iZ-x7C" firstAttribute="leading" secondItem="2lj-nl-GBI" secondAttribute="leading" id="SbM-aC-dL1"/>
+                            <constraint firstItem="2lj-nl-GBI" firstAttribute="trailing" secondItem="dNx-Q3-d1o" secondAttribute="trailing" id="ae5-tA-Chd"/>
+                            <constraint firstItem="G7h-iZ-x7C" firstAttribute="trailing" secondItem="2lj-nl-GBI" secondAttribute="trailing" id="cIB-xm-eBx"/>
+                            <constraint firstItem="E8c-2o-Tou" firstAttribute="top" secondItem="dNx-Q3-d1o" secondAttribute="bottom" constant="25" id="cuR-VE-MMz"/>
+                            <constraint firstItem="E8c-2o-Tou" firstAttribute="centerX" secondItem="za6-RM-n6v" secondAttribute="centerX" id="nhh-uh-YVw"/>
+                            <constraint firstItem="G7h-iZ-x7C" firstAttribute="leading" secondItem="O38-lP-V2K" secondAttribute="leadingMargin" id="xFy-Kl-cdf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SoC-pO-8w3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gmi-TY-wWO"/>
+                    <connections>
+                        <outlet property="eventDB" destination="za6-RM-n6v" id="9EP-uD-qGh"/>
+                        <outlet property="eventdateTxt" destination="dNx-Q3-d1o" id="5jh-Pw-W52"/>
+                        <outlet property="eventlocationTxt" destination="2lj-nl-GBI" id="tp1-1L-XYI"/>
+                        <outlet property="eventnameTxt" destination="G7h-iZ-x7C" id="RrI-ew-mOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucs-jc-QiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="1562.9685157421291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="al4-JY-gFp">
+            <objects>
+                <viewController id="jCq-8u-30X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1k-19-w1i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="haa-zj-cNP"/>
+                        <viewLayoutGuide key="safeArea" id="wnt-l8-ahc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Event" id="Vf9-Ew-9Ne"/>
+                    <navigationItem key="navigationItem" id="Npk-Qt-mdU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oas-Ln-fJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVs-z7-qH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="1620"/>
+            <point key="canvasLocation" x="990" y="2328"/>
         </scene>
         <!--NavVC1-->
         <scene sceneID="lKY-7D-O1x">
@@ -398,7 +479,7 @@
         <!--Main Menu-->
         <scene sceneID="e5x-oz-F06">
             <objects>
-                <viewController id="LYo-y2-JFZ" sceneMemberID="viewController">
+                <viewController id="LYo-y2-JFZ" customClass="MainMenuVC1" customModule="SmartTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDQ-po-pgH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,6 +490,14 @@
                                 <state key="normal" title="Add Event"/>
                                 <connections>
                                     <segue destination="qlC-bT-hyr" kind="show" id="O2P-YG-Kjl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awi-rQ-5WI">
+                                <rect key="frame" x="163" y="228" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout_click:" destination="LYo-y2-JFZ" eventType="touchUpInside" id="bXC-4P-VLn"/>
                                 </connections>
                             </button>
                         </subviews>
