@@ -88,7 +88,7 @@ class LoginVC: UIViewController {
                             
                                 UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
                                 user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
-                                //print(user)
+                                print(user) 
                                                     
                             // go to tabbar / home page
                             DispatchQueue.main.async(execute: {

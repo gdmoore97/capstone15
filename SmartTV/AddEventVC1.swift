@@ -11,7 +11,7 @@ import UIKit
 class AddEventVC1: UIViewController {
 
     // UI objects
-    @IBOutlet weak var fullnameText: UITextField!
+    @IBOutlet weak var ownernameText: UILabel!
     @IBOutlet weak var eventnameText: UITextField!
     @IBOutlet weak var eventlocationText: UITextField!
     @IBOutlet weak var eventdateText: UITextField!
@@ -21,12 +21,15 @@ class AddEventVC1: UIViewController {
     
     @IBAction func add_event(_ sender: Any) {
         
+        var o_fullname = ""
+        if let owner_fullname = user!["owner_fullname"] {
+            o_fullname = owner_fullname as! String
+        }
+        
         // if no text was entered
-        if fullnameText.text!.isEmpty || eventnameText.text!.isEmpty || eventlocationText.text!.isEmpty || eventdateText.text!.isEmpty {
+        if eventnameText.text!.isEmpty || eventlocationText.text!.isEmpty || eventdateText.text!.isEmpty {
             
-                    // enforce red placeholders
-                      fullnameText.attributedPlaceholder = NSAttributedString(string: "who is the event for?", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
-                      
+                        // enforce red placeholder
                       eventnameText.attributedPlaceholder = NSAttributedString(string: "event name", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
                       
                       eventlocationText.attributedPlaceholder = NSAttributedString(string: "event location", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
@@ -41,6 +44,7 @@ class AddEventVC1: UIViewController {
                 u = username as! String
             }
             
+            print(o_fullname)
             
             // remove keyboard
             self.view.endEditing(true)
@@ -57,7 +61,7 @@ class AddEventVC1: UIViewController {
             request.httpMethod = "POST"
             
             // body to be appended to url
-            let body = "eventname=\(eventnameText.text!)&eventlocation=\(eventlocationText.text!)&eventdate=\(eventdateDB.text!)&fullname=\(fullnameText.text!)&creator_username=\(u)"
+            let body = "eventname=\(eventnameText.text!)&eventlocation=\(eventlocationText.text!)&eventdate=\(eventdateDB.text!)&fullname=\(o_fullname)&creator_username=\(u)"
             
             request.httpBody = body.data(using: String.Encoding.utf8)
             
@@ -136,7 +140,17 @@ class AddEventVC1: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         eventdateText.inputView = datePicker
-
+        
+        var o_fullname = ""
+        if let owner_fullname = user!["owner_fullname"] {
+            o_fullname = owner_fullname as! String
+        }
+        
+        print(o_fullname)
+        let message = "You are creating an event for \(o_fullname)"
+        self.ownernameText.text = message
+        
+        
     }
     
       @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {

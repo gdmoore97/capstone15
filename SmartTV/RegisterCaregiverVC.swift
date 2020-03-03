@@ -1,49 +1,23 @@
 //
-//  ViewController.swift
+//  RegisterCaregiverVC.swift
 //  SmartTV
 //
-//  Created by user160653 on 2/14/20.
+//  Created by user160653 on 3/3/20.
 //  Copyright © 2020 Gabriella Moore. All rights reserved.
 //
 
 import UIKit
 
-class RegisterVC: UIViewController {
-    
-    
-    // picker array
-    //let roles = ["Owner", "Caregiver"]
-    
-    // declare the UIPickerView
-    //var picker = UIPickerView()
-    
-    
-    // UI objects
+class RegisterCaregiverVC: UIViewController {
+
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
-    @IBOutlet weak var firstNameTxt: UITextField!
-    @IBOutlet weak var lastNameTxt: UITextField!
-    @IBOutlet weak var roleText: UILabel!
-    //@IBOutlet weak var roleTxt: UITextField!
-    
-    // picker functions
-    
-     //func numberOfComponents(in pickerView: UIPickerView) -> Int {
-      //     return 1
-      // }
-       
-      // func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-      //     return roles.count
-      // }
-       
-      // func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-      //     return roles[row]
-      // }
-       
-      // func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-      //      roleTxt.text = roles[row]
-      // }
- 
+    @IBOutlet weak var firstnameTxt: UITextField!
+    @IBOutlet weak var lastnameTxt: UITextField!
+    @IBOutlet weak var owner_usernameTxt: UITextField!
+    @IBOutlet weak var owner_firstnameTxt: UITextField!
+    @IBOutlet weak var owner_lastnameTxt: UITextField!
+    @IBOutlet weak var roleTxt: UILabel!
     
     // create alert controller
     func createAlert (title: String, message: String) {
@@ -61,35 +35,36 @@ class RegisterVC: UIViewController {
         view.endEditing(true)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterVC.viewTapped(gestureRecognizer:)))
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RegisterCaregiverVC.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
         
-        //picker.delegate = self
-        //picker.dataSource = self
-        //roleTxt.inputView = picker
-        
     }
-
-    // register button clicked
+    
     @IBAction func register_click(_ sender: Any) {
         
         // if no text was entered
-        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || firstNameTxt.text!.isEmpty || lastNameTxt.text!.isEmpty {
+        if usernameTxt.text!.isEmpty || passwordTxt.text!.isEmpty || firstnameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty || owner_usernameTxt.text!.isEmpty || owner_firstnameTxt.text!.isEmpty || owner_lastnameTxt.text!.isEmpty {
+                  
+                  // enforce red placeholders
+                  usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                  
+                  passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                  
+                  firstnameTxt.attributedPlaceholder = NSAttributedString(string: "first name", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                  
+                  lastnameTxt.attributedPlaceholder = NSAttributedString(string: "last name", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             
-            // enforce red placeholders
-            usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                owner_firstnameTxt.attributedPlaceholder = NSAttributedString(string: "owner's first name", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             
-            passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                owner_lastnameTxt.attributedPlaceholder = NSAttributedString(string: "owner's last name", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             
-            firstNameTxt.attributedPlaceholder = NSAttributedString(string: "first", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+                owner_usernameTxt.attributedPlaceholder = NSAttributedString(string: "owner's username", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             
-            lastNameTxt.attributedPlaceholder = NSAttributedString(string: "last", attributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
-            
-            
-        // if text is entered
+            // if text is entered
         } else {
             
             // remove keyboard
@@ -98,7 +73,7 @@ class RegisterVC: UIViewController {
             // ** create a new user in MySQL **
             
             // url to php file
-            let url = URL(string: "http://smartersmarttv.com/tv_register.php")!
+            let url = URL(string: "http://smartersmarttv.com/tv_registerCG.php")!
             
             // request to the file
             var request = URLRequest(url: url)
@@ -107,7 +82,7 @@ class RegisterVC: UIViewController {
             request.httpMethod = "POST"
             
             // body to be appended to url
-            let body = "username=\(usernameTxt.text!.lowercased())&password=\(passwordTxt.text!)&fullname=\(firstNameTxt.text!)%20\(lastNameTxt.text!)&role=\(roleText.text!)"
+            let body = "username=\(usernameTxt.text!.lowercased())&password=\(passwordTxt.text!)&fullname=\(firstnameTxt.text!)%20\(lastnameTxt.text!)&role=\(roleTxt.text!)&owner_fullname=\(owner_firstnameTxt.text!)%20\(owner_lastnameTxt.text!)&owner_username=\(owner_usernameTxt.text!)"
             
             request.httpBody = body.data(using: String.Encoding.utf8)
             
@@ -192,11 +167,42 @@ class RegisterVC: UIViewController {
             // launch prepared session
             
                 } .resume()
+        }
     }
     
-  }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

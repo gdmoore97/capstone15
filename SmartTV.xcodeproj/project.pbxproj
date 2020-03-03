@@ -14,6 +14,7 @@
 		AE30CD3423F730680050A892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3323F730680050A892 /* Assets.xcassets */; };
 		AE30CD3723F730680050A892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3523F730680050A892 /* LaunchScreen.storyboard */; };
 		AE30CD3F23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */; };
+		AE5D7B58240EBA9800CDE478 /* RegisterCaregiverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D7B57240EBA9800CDE478 /* RegisterCaregiverVC.swift */; };
 		AE682D5923FB3D4B00C411EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE682D5823FB3D4B00C411EE /* LoginVC.swift */; };
 		AEC70B7A240C49EB00291AEE /* AddEventViewC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC70B79240C49EB00291AEE /* AddEventViewC2.swift */; };
 		AEC70B7C240C575D00291AEE /* MainMenuVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC70B7B240C575D00291AEE /* MainMenuVC1.swift */; };
@@ -34,6 +35,7 @@
 		AE30CD3623F730680050A892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE30CD3823F730680050A892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg"; sourceTree = "<group>"; };
+		AE5D7B57240EBA9800CDE478 /* RegisterCaregiverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCaregiverVC.swift; sourceTree = "<group>"; };
 		AE682D5823FB3D4B00C411EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AEC70B79240C49EB00291AEE /* AddEventViewC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewC2.swift; sourceTree = "<group>"; };
 		AEC70B7B240C575D00291AEE /* MainMenuVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC1.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				AE30CD2A23F730670050A892 /* AppDelegate.swift */,
 				AE30CD2C23F730670050A892 /* SceneDelegate.swift */,
 				AE30CD2E23F730670050A892 /* RegisterVC.swift */,
+				AE5D7B57240EBA9800CDE478 /* RegisterCaregiverVC.swift */,
 				AE682D5823FB3D4B00C411EE /* LoginVC.swift */,
 				AE30CD3023F730670050A892 /* Main.storyboard */,
 				AE30CD3323F730680050A892 /* Assets.xcassets */,
@@ -176,6 +179,7 @@
 				AEC70B7C240C575D00291AEE /* MainMenuVC1.swift in Sources */,
 				AE30CD2D23F730670050A892 /* SceneDelegate.swift in Sources */,
 				AEECB12124057B4A00C02A87 /* NavVC2.swift in Sources */,
+				AE5D7B58240EBA9800CDE478 /* RegisterCaregiverVC.swift in Sources */,
 				AEC70B7A240C49EB00291AEE /* AddEventViewC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
