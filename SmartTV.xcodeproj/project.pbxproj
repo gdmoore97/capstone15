@@ -14,6 +14,8 @@
 		AE30CD3423F730680050A892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3323F730680050A892 /* Assets.xcassets */; };
 		AE30CD3723F730680050A892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3523F730680050A892 /* LaunchScreen.storyboard */; };
 		AE30CD3F23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */; };
+		AE515D142412EF250075305C /* EventsCellO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE515D132412EF250075305C /* EventsCellO.swift */; };
+		AE515D162412F0DD0075305C /* EventsVCO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE515D152412F0DD0075305C /* EventsVCO.swift */; };
 		AE5D7B58240EBA9800CDE478 /* RegisterCaregiverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D7B57240EBA9800CDE478 /* RegisterCaregiverVC.swift */; };
 		AE682D5923FB3D4B00C411EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE682D5823FB3D4B00C411EE /* LoginVC.swift */; };
 		AE8C822C2410047500691914 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C822B2410047500691914 /* EventsVC.swift */; };
@@ -37,6 +39,8 @@
 		AE30CD3623F730680050A892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE30CD3823F730680050A892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE30CD3E23F7392F0050A892 /* Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beautiful-Nature-Apple-iPhone-7-Plus-Xiaomi-MiUI-9-Wallpapers-6.jpg"; sourceTree = "<group>"; };
+		AE515D132412EF250075305C /* EventsCellO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCellO.swift; sourceTree = "<group>"; };
+		AE515D152412F0DD0075305C /* EventsVCO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVCO.swift; sourceTree = "<group>"; };
 		AE5D7B57240EBA9800CDE478 /* RegisterCaregiverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCaregiverVC.swift; sourceTree = "<group>"; };
 		AE682D5823FB3D4B00C411EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AE8C822B2410047500691914 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				AEC70B7D240C5AA800291AEE /* MainMenuVC2.swift */,
 				AE8C822B2410047500691914 /* EventsVC.swift */,
 				AE8C822D241004F700691914 /* EventsCell.swift */,
+				AE515D132412EF250075305C /* EventsCellO.swift */,
+				AE515D152412F0DD0075305C /* EventsVCO.swift */,
 			);
 			path = SmartTV;
 			sourceTree = "<group>";
@@ -182,8 +188,10 @@
 				AE682D5923FB3D4B00C411EE /* LoginVC.swift in Sources */,
 				AEC70B7E240C5AA800291AEE /* MainMenuVC2.swift in Sources */,
 				AEECB125240580F400C02A87 /* AddEventVC1.swift in Sources */,
+				AE515D162412F0DD0075305C /* EventsVCO.swift in Sources */,
 				AEECB11F2405772500C02A87 /* NavVC1.swift in Sources */,
 				AEC70B7C240C575D00291AEE /* MainMenuVC1.swift in Sources */,
+				AE515D142412EF250075305C /* EventsCellO.swift in Sources */,
 				AE30CD2D23F730670050A892 /* SceneDelegate.swift in Sources */,
 				AE8C822E241004F700691914 /* EventsCell.swift in Sources */,
 				AEECB12124057B4A00C02A87 /* NavVC2.swift in Sources */,
