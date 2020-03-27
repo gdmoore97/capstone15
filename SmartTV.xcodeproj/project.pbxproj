@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE26B81E242E3A5900878EE4 /* EIdeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26B81D242E3A5900878EE4 /* EIdeas.swift */; };
+		AE26B826242E448B00878EE4 /* EICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26B825242E448B00878EE4 /* EICell.swift */; };
 		AE30CD2B23F730670050A892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30CD2A23F730670050A892 /* AppDelegate.swift */; };
 		AE30CD2D23F730670050A892 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30CD2C23F730670050A892 /* SceneDelegate.swift */; };
 		AE30CD2F23F730670050A892 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30CD2E23F730670050A892 /* RegisterVC.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE26B81D242E3A5900878EE4 /* EIdeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIdeas.swift; sourceTree = "<group>"; };
+		AE26B825242E448B00878EE4 /* EICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EICell.swift; sourceTree = "<group>"; };
 		AE30CD2723F730670050A892 /* SmartTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE30CD2A23F730670050A892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE30CD2C23F730670050A892 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				AE8C822D241004F700691914 /* EventsCell.swift */,
 				AE515D132412EF250075305C /* EventsCellO.swift */,
 				AE515D152412F0DD0075305C /* EventsVCO.swift */,
+				AE26B81D242E3A5900878EE4 /* EIdeas.swift */,
+				AE26B825242E448B00878EE4 /* EICell.swift */,
 			);
 			path = SmartTV;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				AEECB12124057B4A00C02A87 /* NavVC2.swift in Sources */,
 				AE5D7B58240EBA9800CDE478 /* RegisterCaregiverVC.swift in Sources */,
 				AEC70B7A240C49EB00291AEE /* AddEventViewC2.swift in Sources */,
+				AE26B81E242E3A5900878EE4 /* EIdeas.swift in Sources */,
+				AE26B826242E448B00878EE4 /* EICell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
