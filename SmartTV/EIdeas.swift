@@ -26,18 +26,150 @@ class EIdeas: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let idea = ideas[indexPath.row]
         let ideaname = idea["idea"] as? String
         
-        cell.eventIdeaTxt.text = ideaname
+        var clean_idea = ""
+        if ideaname == "lunchdate" {
+            clean_idea = "Lunch date with Friend"
+        }
+        else if ideaname == "dinnerdate" {
+            clean_idea = "Dinner date with Friend"
+        }
+        else if ideaname == "swimming" {
+            clean_idea = "Swimming Lesson"
+        }
+        else if ideaname == "golf" {
+            clean_idea = "Golf Game"
+        }
+        else if ideaname == "tennis" {
+            clean_idea = "Tennis Match"
+        }
+        else if ideaname == "basketball" {
+            clean_idea = "Basketball Game"
+        }
+        else if ideaname == "cards" {
+            clean_idea = "Card Game with Friends"
+        }
+        else if ideaname == "boatride" {
+            clean_idea = "Boat Ride with Friends"
+        }
+        else if ideaname == "cruise" {
+            clean_idea = "Cruise for vacation"
+        }
+        else {
+            clean_idea = "Vacation with Family or Friends"
+        }
+        
+        cell.eventIdeaTxt.text = clean_idea
         
         return cell
         
     }
     
+      // create alert controller
+       func createAlert (title: String, message: String) {
+           
+           let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+           
+           alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+               alert.dismiss(animated: true, completion: nil)
+           }))
+           
+           self.present(alert, animated: true, completion: nil)
+       }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadIdeas()
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            deleteEventIdea(indexPath)
+        }
+    }
+    
+
+    @objc func deleteEventIdea(_ indexPath: IndexPath) {
+        
+        let idea = ideas[indexPath.row]
+        var ideaid = 1
+        if let id = idea["id"] {
+            ideaid = id as! Int
+        }
+        
+        let url = URL(string: "http://smartersmarttv.com/tv_deleteeventidea.php")!
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let body = "id=\(ideaid)"
+        request.httpBody = body.data(using: String.Encoding.utf8)
+    
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            DispatchQueue.main.async(execute: {
+                
+                if error == nil {
+                    
+                    do {
+                        
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                        
+                        guard let parseJSON = json else {
+                            print("Error with parsing")
+                            return
+                        }
+                        
+                        let result = parseJSON["result"]
+                        
+                        if result != nil{
+                            
+                            self.ideas.remove(at: indexPath.row)
+                            self.tableV.deleteRows(at: [indexPath], with: .automatic)
+                            self.tableV.reloadData()
+                            
+                        } else {
+                            
+                            DispatchQueue.main.async(execute: {
+                                let message = parseJSON["message"] as! String
+                                  self.createAlert(title: "Error", message: message)
+                                print("stop 1")
+                            })
+                            return
+                        }
+                        
+                    } catch {
+                        // add info here
+                        
+                        DispatchQueue.main.async(execute: {
+                            self.ideas.remove(at: indexPath.row)
+                            self.tableV.deleteRows(at: [indexPath], with: .automatic)
+                            self.tableV.reloadData()
+                            
+                        })
+                        return
+                    }
+                } else {
+                    
+                    DispatchQueue.main.async(execute: {
+                        let message = error!.localizedDescription
+                        self.createAlert(title: "Error", message: message)
+                        print("stop 3")
+                    })
+                    return
+                }
+            })
+            } .resume()
+        
+    }
+    
+    
+ 
     
 
     @objc func loadIdeas(){
