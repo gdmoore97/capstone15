@@ -1,0 +1,48 @@
+# Alexa Skill: Move Suggestions, Intents
+
+---
+intents:
+  ok_great:
+    - 'OK'
+    - 'Great'
+  action:
+    - 'I am interested in action'
+    - 'I want to watch an action film'
+    - 'I want to watch an action movie'
+    - 'I would like to watch action'
+    - 'action movie'
+    - 'action'
+  comedy:
+    - 'I am interested in comedy'
+    - 'I want to watch a comedy film'
+    - 'I want to watch a comedy movie'
+    - 'I would like to watch acomedy'
+    - 'comedy movie'
+    - 'comedy'
+  drama:
+    - 'I am interested in drama'
+    - 'I want to watch a drama film'
+    - 'I want to watch a drama movie'
+    - 'I would like to watch drama'
+    - 'drama movie'
+    - 'drama'
+  documentary:
+    - 'I am interested a documentary'
+    - 'I want to watch a documentary film'
+    - 'I want to watch a documentary movie'
+    - 'I would like to watch a documentary'
+    - 'documentary film'
+    - 'documentary movie'
+    - 'documentary'
+  yes_next:
+    - 'Yes'
+    - 'Yes please'
+    - 'Yep'
+    - 'Yeah'
+    - 'Sure'
+  no_thanks:
+    - 'no thanks'
+    - 'no'
+    - 'nope'
+    - 'nah'
+    - 'no thank you'

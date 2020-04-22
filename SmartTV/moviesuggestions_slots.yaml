@@ -1,0 +1,9 @@
+# Alexa Skill: Move Suggestions, Slots
+
+slots:
+
+  genre:
+    - Action
+    - Comedy
+    - Drama
+    - Documentary 

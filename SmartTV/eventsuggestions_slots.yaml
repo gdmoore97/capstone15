@@ -1,0 +1,17 @@
+# Alexa Skill: Event Suggestions, SLots
+
+---
+slots:
+
+  idea:
+    - lunchdate
+    - dinnerdate
+    - swimming
+    - golf
+    - tennis
+    - basketball
+    - cards
+    - boatride
+    - cruise
+    - vacation
+    

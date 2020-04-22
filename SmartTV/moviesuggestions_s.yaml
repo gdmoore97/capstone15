@@ -1,0 +1,108 @@
+# Alexa Skill: Move Suggestions, Scenario
+
+---
+include:
+  - intents.yml
+  - slots.yml
+  - tests.yml
+scenario:
+  name: 'Movie Suggestions 2'
+  locale: 'en-US'
+  category: EDUCATION_AND_REFERENCE
+  invocation: 'Netflix Movie Suggestions'
+  examplePhrases:
+    - 'Alexa, open Netflix Movie Suggestions'
+  steps:
+  
+     - name: Initial step
+       actions:
+        - sendText: 'Welcome to Netflix Movie Suggestions. '
+       next: 'Genre Type'
+        
+     - name: Genre Type
+       actions:
+          - sendText: '{{ random(["What genre are you interested in?", "What type of movie do you want to watch?", "What genre would you like to watch?"]) }}'
+          - getInput: 
+       next:
+         action: action step
+         comedy: comedy step
+         drama: drama step
+         documentary: documentary step
+
+     - name: action step
+       actions:
+         - getURL:
+             url: 'https://spreadsheets.google.com/feeds/list/11naClgSGA7v4Y29H7oz0rCARTr3_jsLandq51OD4-VI/od6/public/values?alt=json'
+         - set: 'movie_m = urlResponse.feed.entry[random(29)]["gsx$action"]["$t"]'
+         - sendText: '{{ random(["An awesome action movie is ", "A great action movie is ", "A cool action movie is ", "An exciting action movie is "]) }}'
+         - sendText: '{{ movie_m }}. '
+         - sendText: 'Are there any other movie recommendations you would like to hear?'
+         - getInput:
+       next: 
+        yes_next: Genre Type
+        no_thanks: Exit
+        AMAZON.CancelIntent: Exit
+        AMAZON.StopIntent: Exit
+        AMAZON.HelpIntent: Help
+        
+     - name: comedy step
+       actions:
+         - getURL:
+             url: 'https://spreadsheets.google.com/feeds/list/1RSGr4mAB-z7GjDGSqRFZNxdcGd9as9ZCH7ROtXdHMHo/od6/public/values?alt=json'
+         - set: 'movie_m = urlResponse.feed.entry[random(29)]["gsx$comedy"]["$t"]'
+         - sendText: '{{ random(["An awesome comedy movie is ", "A great comedy movie is ", "A cool comedy movie is ", "An exciting comedy movie is ."]) }}'
+         - sendText: '{{ movie_m }}. '
+         - sendText: 'Are there any other movie recommendations you would like to hear?'
+         - getInput:
+       next: 
+        yes_next: Genre Type
+        no_thanks: Exit
+        AMAZON.CancelIntent: Exit
+        AMAZON.StopIntent: Exit
+        AMAZON.HelpIntent: Help
+        
+     - name: drama step
+       actions:
+         - getURL:
+             url: 'https://spreadsheets.google.com/feeds/list/1ULZYtTipcFgkLYXdB8RrK-yfu_0V4naKE-QqmfdtjI4/od6/public/values?alt=json'
+         - set: 'movie_m = urlResponse.feed.entry[random(29)]["gsx$drama"]["$t"]'
+         - sendText: '{{ random(["An awesome drama movie is ", "A great drama movie is ", "An intense drama movie is ", "An exciting drama movie is "]) }}'
+         - sendText: '{{ movie_m }}. '
+         - sendText: 'Are there any other movie recommendations you would like to hear?'
+         - getInput:
+       next: 
+        yes_next: Genre Type
+        no_thanks: Exit
+        AMAZON.CancelIntent: Exit
+        AMAZON.StopIntent: Exit
+        AMAZON.HelpIntent: Help
+        
+     - name: documentary step
+       actions:
+         - getURL:
+             url: 'https://spreadsheets.google.com/feeds/list/1J5zPeHlT4pmznGQBjwvGP34Gcf1d4cONNlDhKR9jaj8/od6/public/values?alt=json'
+         - set: 'movie_m = urlResponse.feed.entry[random(29)]["gsx$documentary"]["$t"]'
+         - sendText: '{{ random(["An awesome documentary movie is ", "A great documentary movie is ", "An intense documentary movie is ", "An exciting documentary movie is "]) }}'
+         - sendText: '{{ movie_m }}. '
+         - sendText: 'Are there any other movie recommendations you would like to hear?'
+         - getInput:
+       next: 
+        yes_next: Genre Type
+        no_thanks: Exit
+        AMAZON.CancelIntent: Exit
+        AMAZON.StopIntent: Exit
+        AMAZON.HelpIntent: Help
+        
+     - name: Exit
+       entrypoint: true
+       actions: 
+        - sendText: '{{ random(["OK, see ya!", "You know where to find me, bye!", "OK, see you next time!", "Bye-bye!"]) }}'
+        
+     - name: Help
+       entrypoint: true
+       actions:
+        - sendText: 'I am here to help! You can ask for another recommendation or exit anytime. Would you like to hear another recommendation?'
+        - getInput: 
+       next: 
+        yes_next: Genre Type
+        no_thanks: Exit

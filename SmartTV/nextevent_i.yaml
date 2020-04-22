@@ -1,0 +1,7 @@
+# Alexa Skill: Next Event, Intents
+
+---
+intents:
+  ok_great:
+    - 'OK'
+    - 'Great'

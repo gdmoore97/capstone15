@@ -1,0 +1,60 @@
+# Alexa Skill: Event Suggestions, Scenairo
+
+---
+include:
+  - intents.yml
+  - slots.yml
+  - tests.yml
+scenario:
+  name: 'Event Suggestions'
+  locale: 'en-US'
+  category: EDUCATION_AND_REFERENCE
+  invocation: 'Event Suggestions'
+  examplePhrases:
+    - 'Alexa, open Event Suggestions'
+  steps:
+  
+    - name: Initial step
+      actions:
+        - sendText: >
+              Welcome to Event Suggestions.
+      next: Add Event Idea
+       
+    - name: Add Event Idea
+      actions: 
+        - sendText: '{{ random(["What event would you like to suggest to your caregiver?", "What would you like your caregiver to schedule for you?"]) }}'
+        - getInput:
+      next: 
+        Event_Sug: Database
+        
+    
+    - name: Database
+      actions:
+        - http.get:
+            url: 'http://smartersmarttv.com/tv_eventideas.php?idea={{idea}}'
+        - sendText: 'The event suggestion has been added'
+      next: Next Step
+          
+    - name: Next Step
+      actions:
+        - sendText: 'Do you have any other event suggestions?'
+        - getInput:
+      next: 
+          yes_next: Add Event Idea
+          no_thanks: Exit
+          AMAZON.CancelIntent: Exit
+          AMAZON.StopIntent: Exit
+          AMAZON.HelpIntent: Help
+    
+    - name: Exit
+      entrypoint: true
+      actions: 
+        - sendText: '{{ random(["OK, see ya!", "You know where to find me, bye!", "OK, see you next time!", "Bye-bye!"]) }}'
+        
+    - name: Help
+      entrypoint: true
+      actions:
+        - sendText: 'I am here to help! You can give another event suggestion or exit anytime. Would you like to add another suggestion?'
+        - getInput: 
+      next: 
+        ok_great: Initial step 

@@ -1,0 +1,22 @@
+# Alexa Skill: Event Suggestions, Intents
+
+---
+intents:
+  ok_great:
+    - 'OK'
+    - 'Great'
+  yes_next:
+    - 'Yes please'
+    - 'yeah'
+    - 'yep'
+    - 'yes'
+  no_thanks:
+    - 'no thanks'
+    - 'no'
+    - 'nope'
+    - 'nah'
+  Event_Sug:
+    - "{idea}"
+    - "I would like to suggest {idea}"
+    - "I want to suggest {idea}"
+    
