@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartTv</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password">Password</string>
+</resources>
